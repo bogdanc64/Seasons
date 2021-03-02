@@ -55,8 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ProblemePage.xaml.cs">
+      <DependentUpon>ProblemePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="secondpage.xaml.cs">
       <DependentUpon>secondpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeoriePage.xaml.cs">
+      <DependentUpon>TeoriePage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -74,7 +80,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ProblemePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="secondpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeoriePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,18 +123,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="spring.jpg" />
-    <Resource Include="summer.jpg" />
-    <Resource Include="winter.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="fall.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="bg3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="seasons.png" />
+    <Resource Include="code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coding.jpg" />
+    <Resource Include="Images\theory.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

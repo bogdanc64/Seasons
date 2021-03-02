@@ -23,7 +23,9 @@ namespace First_App_In_WPF
         public secondpage()
         {            
             InitializeComponent();
+
         }
+
         private void Button_Click_back(object sender, RoutedEventArgs e)
         {
             Page1 home = new Page1();
@@ -32,36 +34,30 @@ namespace First_App_In_WPF
         }
         private void Button_submit(object sender, RoutedEventArgs e)
         {
-            if (radiobuttonWinter.IsChecked == true)
+           if(radiobuttonTeorie.IsChecked==true)
             {
-                Image.Visibility = Visibility.Visible;
-                Image2.Visibility = Visibility.Hidden;
-                Image3.Visibility = Visibility.Hidden;
-                Image4.Visibility = Visibility.Hidden;
-
-            }
-            if (radiobuttonSpring.IsChecked == true)
-            {
-                Image.Visibility = Visibility.Hidden;
-                Image2.Visibility = Visibility.Visible;
-                Image3.Visibility = Visibility.Hidden;
-                Image4.Visibility = Visibility.Hidden;
-            }
-            if (radiobuttonSummer.IsChecked == true)
-            {
-                Image.Visibility = Visibility.Hidden;
-                Image2.Visibility = Visibility.Hidden;
-                Image3.Visibility = Visibility.Visible;
-                Image4.Visibility = Visibility.Hidden;
-            }
-            if (radiobuttonFall.IsChecked == true)
-            {
-                Image.Visibility = Visibility.Hidden;
-                Image2.Visibility = Visibility.Hidden;
-                Image3.Visibility = Visibility.Hidden;
-                Image4.Visibility = Visibility.Visible;
+                TeoriePage teoriePage = new TeoriePage();
+                this.NavigationService.Navigate(teoriePage);
             }
 
+           else if (radiobuttonProbleme.IsChecked == true)
+            {
+                ProblemePage problemePage = new ProblemePage();
+                this.NavigationService.Navigate(problemePage);
+            }
+        }
+
+        private void rb_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            switch (((RadioButton)sender).Name)
+            {
+                case "radiobuttonTeorie":
+                    Image.Source = new BitmapImage(new Uri("pack://application:,,,/Images/theory.jpg", UriKind.Absolute));
+                    return;
+                case "radiobuttonProbleme":
+                    Image.Source = new BitmapImage(new Uri("pack://application:,,,/Images/coding.jpg", UriKind.Absolute));
+                    return;
+            }
         }
 
     }

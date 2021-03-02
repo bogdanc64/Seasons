@@ -22,46 +22,19 @@
             <RowDefinition />
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Label Grid.Column="1" Grid.Row="1" FontSize="17" Foreground="#FFFFFF">Select a season and press the button!</Label>
+        <Label Grid.Column="1" Grid.Row="1" Margin="25,0,0,0" FontSize="17" Foreground="#FFFFFF">Despre ce doresti sa aflii informatii?</Label>
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="50,50,0,0">
-            <RadioButton VerticalContentAlignment="Center" Name="radiobuttonWinter">
-                <Label FontWeight="Bold" FontSize="12" Foreground="#FFFFFF">Winter</Label>
+            <RadioButton VerticalContentAlignment="Center" Name="radiobuttonTeorie" Checked="rb_Checked">
+                <Label FontWeight="Bold" FontSize="12" Foreground="#FFFFFF">Teorie</Label>
             </RadioButton>
-            <RadioButton VerticalContentAlignment="Center" Name="radiobuttonSpring">
-                <Label FontWeight="Bold" FontSize="12" Foreground="#FFFFFF">Spring</Label>
+            <RadioButton VerticalContentAlignment="Center" Name="radiobuttonProbleme" Checked="rb_Checked">
+                <Label FontWeight="Bold" FontSize="12" Foreground="#FFFFFF">Probleme</Label>
             </RadioButton>
-            <RadioButton VerticalContentAlignment="Center" Name="radiobuttonSummer">
-                <Label FontWeight="Bold" FontSize="12" Foreground="#FFFFFF">Summer</Label>
-            </RadioButton>
-            <RadioButton IsChecked="True" VerticalContentAlignment="Center" Name="radiobuttonFall">
-                <Label FontWeight="Bold" FontSize="12" Foreground="#FFFFFF">Fall</Label>
-            </RadioButton>
-            <Button Name="viewbutton" Width="70" 
- Height="35" HorizontalAlignment="left" Margin="0,20,0,0" Click="Button_submit">View</Button>
+            <Button x:Name="viewbutton" Width="70" 
+ Height="35" HorizontalAlignment="left" Margin="0,20,0,0" Click="Button_submit" Content="View"/>
         </StackPanel>
-        <Image Name="Image" Visibility="hidden" Grid.Column="0" Grid.Row="1" Width="500" Height="170">
-            <Image.Source>
-                <BitmapImage DecodePixelWidth="300" UriSource="winter.jpg" />
-            </Image.Source>
-        </Image>
-        <Image Name="Image2" Visibility="hidden" Grid.Column="0" Grid.Row="1" Width="500" Height="170">
-            <Image.Source>
-                <BitmapImage DecodePixelWidth="300" UriSource="spring.jpg" />
-            </Image.Source>
-        </Image>
-        <Image Name="Image3" Visibility="hidden" Grid.Column="0" Grid.Row="1" Width="300" Height="225">
-            <Image.Source>
-                <BitmapImage DecodePixelWidth="200" UriSource="summer.jpg" />
-            </Image.Source>
-        </Image>
-        <Image Name="Image4" Visibility="hidden" Grid.Column="0" Grid.Row="1" Width="300" Height="225">
-            <Image.Source>
-                <BitmapImage DecodePixelWidth="200" UriSource="fall.jpg" />
-            </Image.Source>
-        </Image>
-        <Button Name="NextButton" Grid.Column="1" Grid.Row="4" Margin="0,10,10,5" Width="125" 
- Height="35" HorizontalAlignment="Right" IsEnabled="False">Next</Button>
-        <Button Name="BackButton" Grid.Column="1" Grid.Row="4" Margin="0,10,145,5" Width="125" 
+        <Image Name="Image" Visibility="visible" Grid.Column="0" Grid.Row="1" Width="500" Height="170"></Image>
+        <Button Name="BackButton" Grid.Column="1" Grid.Row="3" Margin="0,10,20,5" Width="125" 
  Height="35" HorizontalAlignment="Right" Click="Button_Click_back">Back</Button>
     </Grid>
 </Page>
